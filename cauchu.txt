@@ -1,0 +1,88 @@
+Khung dự án 
+-Frontend 
+-Admin 
+-CSDL
+1) Phân tích dự án 
+- frontend 
+    -Trang chủ 
+    -Trang Danh sách sản phẩm 
+    -Trang chi tiết sản phẩm 
+    -Trang Giỏ hàng 
+    -Trang checkout 
+    -Trang Thanh toán hoàn thành.
+    -Trang Liên Hệ 
+- admin :
+    -Tài Khoản NGười dùng : 
+        quản lý role(admin,user)
+        Quản lý người dùng :admin/user 
+        Đăng Ký tài khoản 
+        Đăng nhập ; 
+    -Quản lý danh mục sản phẩm 
+    -Quản lý sản phẩm 
+    -quản lý đơn hàng 
+        hiển thị danh sách các đơn hàng -> hiển thị giảm dần theo time 
+        (quản lý trạng thái)
+    -Quản lý phản hồi 
+2) CSDL 
+    1.Bảng Role 
+        id : int -> tự tăng 
+        name : string(varchar) -100
+    2.Bảng User 
+        id: int -> Khóa chính tự tăng 
+        fullname
+        email 
+        phone_number -> string 
+        address
+        password ->string ->md5 ; 32 ký tự -> chính xác 
+        role_id -> int -> foreign key -> rode(id)
+    3.Bảng danh mục -> Category 
+        -id 
+        -name 
+    4.Bảng sản phẩm -> Product
+        -id : int -> tự tăng 
+        -Category_id ->int ->foreign key ->Category(id)
+        -title:string ->350 ; 
+        -price : int -> 
+        -discout:int 
+        -thumbnail : string -> 500 ký tự (hình ảnh)
+        -description : longtext (trường mô tả)
+        -created _at : datetime -> tạo bản ghi 
+        -update_at : datetime -> sửa bản ghi đó 
+    5.Bảng quản lý galery 
+        -id 
+        -product_id -> foreign key -> product(id)
+        -thumbnail -> string -> 500 ký tự 
+    6. Quản lý phản hồi -> feedback 
+        -id : int 
+        -firsyname 
+        -lastname
+        -email
+        -phone_number 
+        -subject_name 
+        -note -> string 
+    7. Quản lý đơn hàng 
+        -id 
+        -fullname
+        -email
+        -phone_number
+        -address
+        -note
+        -order_date : datetime
+    7.1)Bảng Order 
+        -id 
+        -fullname
+        -email
+        -phone_number
+        -address
+        -note
+        -order_date : datetime
+        -status : int 
+    7.2) Bảng chi tiết đơn hàng 
+        -id 
+        -order_id 
+        -product_id
+        -price 
+        -num 
+        -total_money -> lưu tổng tiền của sản phẩm (price*num)
+
+Tạo database
