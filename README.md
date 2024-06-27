@@ -16,4 +16,7 @@ B5 : chạy chương trình
 ![image](https://github.com/PandacoderSE/Bandoan_PHP/assets/142031035/7ce0e44c-9fba-4d29-a750-d6cb6b19f937)
 <br>
 <span style="color:red">Cảm mn ơn đã đọc - copyright of Nguyen Van Manh(maxcoder)</span>
-
+<br>
+<b> Tham Khảo :</b> 
+<br>
+MÔ HÌNH MVC trong PHP : https://github.com/khoaphp/php-mvc.git
